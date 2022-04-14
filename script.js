@@ -12,7 +12,7 @@ const ftoken = window.location.hash;
 const myodp1 = 'https://onedrive.live.com/download?resid=';
 const myodp2 = '&authkey=';
 const yturl0 = 'https://youtu.be/';
-const docbody = document.querySelector('body');
+const docbody = document.body;
 if (ftoken.substr(ftoken.length - 17).slice(0, 15) == 'dy5grvgf9ufyc5f') {
     let dataanchor = document.createElement('a');
     dataanchor.setAttribute('id', 'dataanchor');
