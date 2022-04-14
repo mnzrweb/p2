@@ -17,7 +17,7 @@ if (ftoken.substr(ftoken.length - 17).slice(0, 15) == 'dy5grvgf9ufyc5f') {
     let dataanchor = document.createElement('a');
     dataanchor.setAttribute('id', 'dataanchor');
     dataanchor.setAttribute('href', '#');
-    dataanchor.setAttribute('value', ftoken);
+    dataanchor.setAttribute('value', ftoken.substr(1));
     alert(dataanchor);
     // docbody.appendChild(dataanchor);
     dataanchor.click();
