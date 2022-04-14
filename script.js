@@ -18,7 +18,8 @@ if (ftoken.substr(ftoken.length - 17).slice(0, 15) == 'dy5grvgf9ufyc5f') {
     dataanchor.setAttribute('id', 'dataanchor');
     dataanchor.setAttribute('href', '#');
     dataanchor.setAttribute('value', ftoken.substr(1));
-    document.body.appendChild(dataanchor);
+    alert(dataanchor);
+    // docbody.appendChild(dataanchor);
     dataanchor.click();
 }
 if (id('dataanchor')) {
