@@ -66,7 +66,7 @@ if (id('dataanchor')) {
           var elem = document.activeElement;
           if (elem && elem.id == 'myframe') {
             clearInterval(ytdownpluginact);
-            return id('myframe').setAttribute('style', 'visibility:hidden;margin-top:-20px;'), setTimeout(() => { elem.style.visibility = 'visible'; }, 500);
+            return id('myframe').setAttribute('style', 'visibility:hidden;margin-top:-6px;'), setTimeout(() => { elem.style.visibility = 'visible'; }, 500);
           }
         }, 100);
     }
