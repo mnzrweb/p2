@@ -1,0 +1,21 @@
+/* Stylesheet */
+#adplc1,
+#adplc2,
+#adplc3 {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    width: fit-content;
+    text-align: -webkit-center;
+    max-width: 480px;
+    min-width: 220px;
+}
+#adplc1>img,
+#adplc2>img,
+#adplc3>img {
+    width: -webkit-fill-available;
+}
+.adbtn {
+    font-size: large;
+}
