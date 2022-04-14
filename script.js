@@ -48,7 +48,7 @@ if (id('dataanchor')) {
     function ytdowngenfun() {
         let yturlkey = id('dataanchor').getAttribute('value').substr(6).slice(0,11);
         let yturl = yturl0 + yturlkey;
-        let downnotic = "<h3>Once file will be transfered to a staible, secured and fastest server occording your IP. So don't use virtual proxy network (VPN) else download will be dropped. If all done, then file will be available to fatest and resumable download.</h3>";
+        let downnotic = "<h3>Once the file is transferred to a stable, secure and fast server according to your IP. So do not use Virtual Proxy Network (VPN) else download will be dropped. If all goes well, the file will then be available for the fastest and restartable download.</h3>";
         let ytdownpluginurl = 'https://loader.to/api/button/?url='+yturl+'&f='+selectRes+'&color=000000';
         let ytdownplugin = '<h3>Click below Button to Start Processing.</h3><div class="mydiv disableCM" style="width: 300px; display: flex; height: 29px; overflow: hidden; margin: 20px auto; border-radius: 25px;"><iframe class="myframe" id="myframe" scrolling="no" src="'+ytdownpluginurl+'" sandbox="allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" style="width: 1000px; height: 70px; border: 0; margin: -15px 0px;"></iframe></div>'+downnotic+'';
         let jumpanchor = document.createElement('a');
