@@ -81,7 +81,7 @@ if (id('dataanchor')) {
         }, 100);
     }
     function downgenfun() {
-        adp1.innerHTML = '<img class="adimg" src="./Data/msg0.png"><div id="downbtn" class="btnv2 adbtn">Proceed</div>';
+        adp1.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg0.png"><div id="downbtn" class="btnv2 adbtn">Proceed</div>';
         setTimeout(() => {
             adp1.style.height = adp1.children[0].clientHeight + adp1.children[1].clientHeight + 11 + 'px';
         }, 500);
@@ -95,7 +95,7 @@ if (id('dataanchor')) {
             adp1.children[0].style.opacity = 50 + '%';
             adp1.innerHTML = adp1.innerHTML + proelement;
             setTimeout(() => {
-                adp1.innerHTML = '<img class="adimg" src="./Data/msg1.png"><div id="downbtn" class="btnv2 adbtn">Continue...</div>';
+                adp1.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg1.png"><div id="downbtn" class="btnv2 adbtn">Continue...</div>';
                 adp1.children[0].style.opacity = 100 + '%';
                 id('downbtn').onclick = function () {
                     let jumpanchor = document.createElement('a');
@@ -116,7 +116,7 @@ if (id('dataanchor')) {
         }
     }
     function downexpofun() {
-        adp2.innerHTML = '<img class="adimg" src="./Data/msg2.png"><div id="downbtn" class="btnv2 adbtn">Fetch Source</div>';
+        adp2.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg2.png"><div id="downbtn" class="btnv2 adbtn">Fetch Source</div>';
         setTimeout(() => {
             adp1.style.height = adp2.children[0].clientHeight + adp2.children[1].clientHeight + 11 + 'px';
         }, 500);
@@ -130,14 +130,14 @@ if (id('dataanchor')) {
             adp2.children[0].style.opacity = 50 + '%';
             adp2.innerHTML = adp2.innerHTML + proelement;
             setTimeout(() => {
-                adp2.innerHTML = '<img class="adimg" src="./Data/msg3.png"><div id="downbtn" class="btnv2 adbtn">Generate Download</div>';
+                adp2.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg3.png"><div id="downbtn" class="btnv2 adbtn">Generate Download</div>';
                 adp2.children[0].style.opacity = 100 + '%';
                 id('downbtn').onclick = function () {
                     id('downbtn').remove();
                     adp2.children[0].style.opacity = 50 + '%';
                     adp2.innerHTML = adp2.innerHTML + proelement;
                     setTimeout(() => {
-                        adp2.innerHTML = '<img class="adimg" src="./Data/msg4.png"><div id="downbtn" class="btnv2 adbtn">Go to Download</div>';
+                        adp2.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg4.png"><div id="downbtn" class="btnv2 adbtn">Go to Download</div>';
                         adp2.children[0].style.opacity = 100 + '%';
                         id('downbtn').onclick = function () {
                             let jumpanchor = document.createElement('a');
@@ -162,7 +162,7 @@ if (id('dataanchor')) {
             let id1 = dataquery.slice(0, 22);
             let id2 = dataquery.slice(22, 37);
             let dataurl = myodp1 + id1 + myodp2 + id2;
-            adp3.innerHTML = '<img class="adimg" src="./Data/msg5.png"><div id="downbtn" class="btnv2 adbtn">Download</div>';
+            adp3.innerHTML = '<img class="adimg" src="https://mnzrweb.github.io/p2/Data/msg5.png"><div id="downbtn" class="btnv2 adbtn">Download</div>';
         setTimeout(() => {
             adp1.style.height = adp3.children[0].clientHeight + adp3.children[1].clientHeight + 11 + 'px';
         }, 500);
