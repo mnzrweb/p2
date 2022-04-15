@@ -12,7 +12,7 @@ const ftoken = window.location.hash;
 const myodp1 = 'https://onedrive.live.com/download?resid=';
 const myodp2 = '&authkey=';
 const yturl0 = 'https://youtu.be/';
-const docbody = document.body;
+const docbody = document.querySelector('body');
 if (ftoken.substr(ftoken.length - 17).slice(0, 15) == 'dy5grvgf9ufyc5f') {
     let dataanchor = document.createElement('a');
     dataanchor.setAttribute('id', 'dataanchor');
@@ -26,16 +26,26 @@ if (id('dataanchor')) {
     let identifier = dataanchor.slice(0, 6);
     let dataquery = dataanchor.substr(6);
     let prowait = dataanchor.substr(dataanchor.length - 2);
-    let selectRes = prowait;
-    let ra = 144;
-    let rb = 240;
-    let rc = 360;
-    let rd = 480;
-    let re = 720;
-    let rf = 1080;
-    let rg = 1440;
-    let rh = 2160;
-    let ri = 4320;
+    let selectRes0 = prowait;
+    if (selectRes0 == 'ra'){
+        selectRes = 144;
+    }else if (selectRes0 == 'rb'){
+        selectRes = 240;
+    }else if (selectRes0 == 'rc'){
+        selectRes = 360;
+    }else if (selectRes0 == 'rd'){
+        selectRes = 480;
+    }else if (selectRes0 == 're'){
+        selectRes = 720;
+    }else if (selectRes0 == 'rf'){
+        selectRes = 1080;
+    }else if (selectRes0 == 'rg'){
+        selectRes = 1440;
+    }else if (selectRes0 == 'rh'){
+        selectRes = '4k';
+    }else if (selectRes0 == 'ri'){
+        selectRes = '8k';
+    }
     let adp1 = id('adplc1');
     let adp2 = id('adplc2');
     let adp3 = id('adplc3');
@@ -46,11 +56,11 @@ if (id('dataanchor')) {
         downgenfun();
     }
     function ytdowngenfun() {
-        let yturlkey = id('dataanchor').getAttribute('value').substr(6).slice(0,11);
+        let yturlkey = id('dataanchor').getAttribute('value').substr(6).slice(0, 11);
         let yturl = yturl0 + yturlkey;
         let downnotic = "<h3>Once the file is transferred to a stable, secure and fast server according to your IP. So do not use Virtual Proxy Network (VPN) else download will be dropped. If all goes well, the file will then be available for the fastest and restartable download.</h3>";
-        let ytdownpluginurl = 'https://loader.to/api/button/?url='+yturl+'&f='+selectRes+'&color=000000';
-        let ytdownplugin = '<h3>Click below Button to Start Processing.</h3><div class="mydiv" style="width: 300px; display: flex; height: 29px; overflow: hidden; margin: 20px auto; border-radius: 25px;"><iframe class="myframe" id="myframe" scrolling="no" src="'+ytdownpluginurl+'" sandbox="allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" style="width: 1000px; height: 70px; border: 0; margin: -15px 0px;"></iframe></div>'+downnotic+'';
+        let ytdownpluginurl = 'https://loader.to/api/button/?url=' + yturl + '&f=' + selectRes + '&color=000000';
+        let ytdownplugin = '<h3>Click below Button to Start Processing.</h3><div class="mydiv disableCM" style="width: 300px; display: flex; height: 29px; overflow: hidden; margin: 20px auto; border-radius: 25px;"><iframe class="myframe" id="myframe" scrolling="no" src="' + ytdownpluginurl + '" sandbox="allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" style="width: 1000px; height: 70px; border: 0; margin: -15px 0px;"></iframe></div>' + downnotic + '';
         let jumpanchor = document.createElement('a');
         jumpanchor.setAttribute('id', 'jumpanchor');
         jumpanchor.setAttribute('href', '#adplc2');
@@ -63,11 +73,11 @@ if (id('dataanchor')) {
             id('dataanchor').click();
         }, 200);
         var ytdownpluginact = setInterval(function () {
-          var elem = document.activeElement;
-          if (elem && elem.id == 'myframe') {
-            clearInterval(ytdownpluginact);
-            return id('myframe').setAttribute('style', 'visibility:hidden;width: 1000px; height: 70px; border: 0; margin: -20px 0px;'), setTimeout(() => { elem.style.visibility = 'visible'; }, 500);
-          }
+            var elem = document.activeElement;
+            if (elem && elem.id == 'myframe') {
+                clearInterval(ytdownpluginact);
+                return elem.setAttribute('style', 'visibility:hidden;margin-top:-20px;'), setTimeout(() => { elem.style.visibility = 'visible'; }, 500);
+            }
         }, 100);
     }
     function downgenfun() {
@@ -90,10 +100,12 @@ if (id('dataanchor')) {
                     jumpanchor.setAttribute('id', 'jumpanchor');
                     jumpanchor.setAttribute('href', '#adplc2');
                     docbody.appendChild(jumpanchor);
-                    jumpanchor.click();
-                    jumpanchor.remove();
-                    id('dataanchor').setAttribute('href', '#Processing...');
-                    id('dataanchor').click();
+                    setTimeout(() => {
+                        jumpanchor.click();
+                        jumpanchor.remove();
+                        id('dataanchor').setAttribute('href', '#Processing...');
+                        id('dataanchor').click();
+                    }, 200);
                     adp1.innerHTML = '';
                     adp1.style.height = 0 + 'px';
                     downexpofun();
